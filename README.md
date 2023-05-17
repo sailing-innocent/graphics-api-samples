@@ -1,6 +1,6 @@
 # 图形API例程
 
--- WIP 2023-05-07 --
+-- WIP 2023-05-10 --
 
 这是我对于图形学API的学习报告配套的例程
 
@@ -51,7 +51,7 @@
 - 打开你喜爱的命令行（比如windows下的powershell，linux下的bash），将路径切换到项目根目录。
 
 ### Hello C++
-- `git checkout basis`
+- `git checkout basis-v0.1.0`
 - `xmake`
 - `xmake run hello`
 - 你可以看到在命令行中打印`Hello C++`字样
