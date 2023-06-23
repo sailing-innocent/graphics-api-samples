@@ -20,11 +20,7 @@ add_includedirs("external", {public = true})
 -- our test environment
 target("gas_test")
     set_kind("binary")
-
-    -- OGL BRANCH DEPENDENCIES BEGIN
     add_packages("glfw")
-    -- OGL BRANCH DEPENDENCIES END
-
     add_includedirs("src", {public = true})
     add_includedirs("test", {public = false})
     add_deps("gas")
