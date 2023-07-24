@@ -5,7 +5,7 @@
  * @brief the hello environment for opengl dependencies
  */
 
-#include <catch2/catch.hpp>
+#include "common/gas_app_util.h"
 
 #define GLAD_GL_IMPLEMENTATION
 #include "glad/gl.h"
@@ -46,6 +46,11 @@ int ogl_window() {
 }
 
 
-TEST_CASE("ogl::window", "[ogl]"){
+TEST_SUITE("ogl_basic") {
+
+TEST_CASE("ogl::window"){
     REQUIRE(ogl_window() == 0);
 }
+
+} // TEST_SUITE("ogl_basic")
+

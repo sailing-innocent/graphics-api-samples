@@ -5,7 +5,8 @@
  * @brief The test suite for GAS opengl plain app
  */
 
-#include <catch2/catch.hpp>
+#include "common/gas_app_util.h"
+
 #include <ogl/plain_app.h>
 
 int ogl_plain_app() {
@@ -16,6 +17,10 @@ int ogl_plain_app() {
     return 0;
 }
 
-TEST_CASE("ogl::plain_app", "[ogl]"){
+TEST_SUITE("ogl_basic") {
+
+TEST_CASE("ogl::plain_app"){
     REQUIRE(ogl_plain_app() == 0);
 }
+
+} // TEST_SUITE("ogl_basic")
