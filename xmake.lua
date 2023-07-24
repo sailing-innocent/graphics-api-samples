@@ -3,6 +3,7 @@ set_project("graphics-api-sample")
 
 -- add debug and release modes
 add_rules("mode.debug", "mode.release")
+set_languages("cxx17")
 
 -- our 'gas' library
 includes("src")
@@ -13,6 +14,7 @@ target("gas_test")
     add_includedirs("src", {public = true})
     add_includedirs("test", {public = false})
     add_deps("gas")
+    add_files("test/common/gas_app_util.cpp")
     add_files("test/gas_test/**.cpp")
 target_end()
 

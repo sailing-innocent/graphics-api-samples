@@ -5,8 +5,13 @@
  * @brief the hello test to test the testing environment
  */
 
-#include <catch2/catch.hpp>
+#include "common/gas_app_util.h"
 
-TEST_CASE("test_env", "[basic]"){
+TEST_SUITE("basic"){
+
+TEST_CASE("test_env"){
     REQUIRE(1 == 1);
 }
+
+} // "basic" test suite
+
