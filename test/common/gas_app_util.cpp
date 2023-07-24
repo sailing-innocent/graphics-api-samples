@@ -16,7 +16,7 @@ static std::vector<const char *> args;
 int argc() noexcept { return static_cast<int>(args.size()); }
 const char *const *argv() noexcept { return args.data(); }
 
-}// namespace inno::app
+}// namespace gas::app
 
 int main(int argc, const char **argv) {
     doctest::Context context(argc, argv);

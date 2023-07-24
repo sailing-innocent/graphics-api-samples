@@ -4,7 +4,9 @@
 
 - 编译`xmake`
 - 我们会编译一个静态库`gas.lib`和一个可执行对象`gas_test.exe`，其中后者编译时候会链接之前编译出来的静态库
-- 参考test/gas_test中的代码结构，其中`main.cpp`作为程序入口，会捕获其他cpp文件中用 `TEST_CASE`宏包裹住的测试用例
-- `xmake run gas_test -l`可以查看我们到底写了多少个测试例子
-- `xmake run gas_test test_env`中测试一个恒真命题`1==1`，是用来测试我们的框架是否安装正确的
-- `xmake run gas_test test_lib`中测试gas.lib中的一个简单函数`int return_one()`效果就是返回1，可以在`test/gas_test/basic/lib.cpp`中找到测试用例的源码，这是用来测试我们和主体静态库的链接是否正确的。
+- 参考test/gas_test中的代码结构，其中`common/gas_app_util.cpp`作为程序入口，会捕获其他cpp文件中用 `TEST_CASE`宏包裹住的测试用例
+- `xmake run gas_test -ltc`可以查看我们到底写了多少个测试例子
+- `xmake run gas_test -lts`可以查看我们设置了多少个TEST SUITE
+- `xmake run gas_test -tc=test_env`中测试一个恒真命题`1==1`，是用来测试我们的框架是否安装正确的
+- `xmake run gas_test -tc=test_lib`中测试gas.lib中的一个简单函数`int return_one()`效果就是返回1，可以在`test/gas_test/basic/lib.cpp`中找到测试用例的源码，这是用来测试我们和主体静态库的链接是否正确的。
+- 我们同样可以测试TEST_SUITE=basic中的全部测试用例，`xmake run gas_test -ts=basic`
