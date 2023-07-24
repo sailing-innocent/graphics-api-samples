@@ -6,6 +6,4 @@
 
 ## 为什么选择doctest
 
-doctest是一个相对轻量的C++测试框架
-
-<!-- TODO: DOCTEST Introduction -->
+doctest是一个相对轻量的C++测试框架，它只有一个头文件，可以在 https://github.com/doctest/doctest 中的 release 页面轻松地下载
