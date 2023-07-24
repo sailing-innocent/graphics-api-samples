@@ -11,20 +11,16 @@
 
 ## 如何使用例程
 
-例程使用git+xmake+catch2进行组织
-
-        因为个人不太喜欢cmake的语法，所以会优先支持xmake的例程，后续视情况酌情考虑是否需要添加cmake相关。
+例程使用git+xmake+doctest进行组织，因为个人不太喜欢cmake的语法，所以会优先支持xmake的例程，后续视情况酌情考虑是否需要添加cmake相关。
 
 ### 源码相关
 - 获取源码：`git clone https://github.com/sailing-innocent/graphics-api-samples`
-- 查看tag: `git tags`
-- 切换到不同的tag下：`git checkout v0.0.1` (the starting point)
 - 查看branch: `git branch -l` 本文主要内容都在不同的branch中，详细情况请查看doc/overview.md
-  - master: 只保留文档内容
-  - basis: the basic xmake + catch2 framework
-  - opengl: the opengl branch
-  - vulkan: the vulkan branch
-  - directX: the DirectX12 branch
+  - main: 所有主要主干文档内容的更新
+  - basis: the basic xmake + doctest framework
+  - ogl: the opengl branch
+  - vk: the vulkan branch
+  - dx: the DirectX12 branch
 关于各个branch和tag的区别，可以查看doc/overview.md
 
 ### 编译相关
@@ -37,7 +33,7 @@
 
 ### 测试框架相关
 
-也许你注意到了，我们的例程引入catch2测试框架。这个测试框架的作用不仅限于检查我们函数实现正确与否，我发现在学习新的知识时候，它也可以帮助我们轻松验证一些小的知识点是否掌握牢固，写很多并非主线需要，但是对于厘清概念十分重要的小例子。所以我非常推荐大家也进行一些尝试。更详细的信息，可以参考 doc/overview.md
+也许你注意到了，我们的例程引入doctest测试框架。这个测试框架的作用不仅限于检查我们函数实现正确与否，我发现在学习新的知识时候，它也可以帮助我们轻松验证一些小的知识点是否掌握牢固，写很多并非主线需要，但是对于厘清概念十分重要的小例子。所以我非常推荐大家也进行一些尝试。更详细的信息，可以参考 doc/test_framework.md
 
 ### Q/A
 
